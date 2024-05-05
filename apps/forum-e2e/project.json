@@ -1,0 +1,9 @@
+{
+  "name": "forum-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/forum-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["forum"],
+  "// targets": "to see all targets run: nx show project forum-e2e --web",
+  "targets": {}
+}
