@@ -1,0 +1,9 @@
+{
+  "name": "list-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/list-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["list"],
+  "// targets": "to see all targets run: nx show project list-e2e --web",
+  "targets": {}
+}
