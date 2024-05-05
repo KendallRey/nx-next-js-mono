@@ -1,7 +1,32 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.input {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+.button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #123f6e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
