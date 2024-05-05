@@ -1,0 +1,24 @@
+{
+  "name": "login-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/login-api/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "login-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "login-api:build:development"
+        },
+        "production": {
+          "buildTarget": "login-api:build:production"
+        }
+      }
+    }
+  }
+}

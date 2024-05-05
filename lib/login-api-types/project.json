@@ -1,0 +1,9 @@
+{
+  "name": "login-api-types",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "lib/login-api-types/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project login-api-types --web",
+  "targets": {}
+}

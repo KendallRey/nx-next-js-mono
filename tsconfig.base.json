@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@nx-next-js-micro/lib/ui": ["lib/ui/src/index.ts"],
-      "@nx-next-js-micro/lib/ui/server": ["lib/ui/src/server.ts"]
+      "@nx-next-js-micro/lib/ui/server": ["lib/ui/src/server.ts"],
+      "@nx-next-js-micro/login-api-types": ["lib/login-api-types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
