@@ -6,8 +6,14 @@
 import { LoginRequestBody } from 'lib/login-api-types/src';
 import express from 'express';
 import * as path from 'path';
+import cors from 'cors';
 
 const app = express();
+
+app.use(express.json());
+app.use(cors({
+  origin: ['http://localhost:3000']
+}));
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
