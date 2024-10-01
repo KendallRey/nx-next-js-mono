@@ -1,3 +1,5 @@
+"use client";
+
 import { alpha, Menu, MenuProps, styled } from "@mui/material";
 import React from "react";
 

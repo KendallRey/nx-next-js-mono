@@ -119,5 +119,4 @@ export { default as MuiBadge } from "./badge/Badge";
 export * from "./avatar/Avatar";
 export { default as MuiAvatar } from "./avatar/Avatar";
 
-
 export type * from "./types/index";

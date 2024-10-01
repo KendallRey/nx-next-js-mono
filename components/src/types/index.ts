@@ -13,4 +13,35 @@ export type IRoute = {
   name: string;
   href: string;
   icon?: React.ReactNode;
-}
+};
+
+export type IApiProps = {
+  params?: IApiParams;
+  skip?: boolean;
+  ignore?: string[];
+  defaultParams?: IApiParams;
+  overrideParams?: IApiParams;
+};
+
+export type IApiParams = Record<string, any>;
+
+export type IApiSuccessResponse<T> = {
+  status: "ok";
+  code: number;
+  data: T;
+  error?: null;
+};
+
+export type IApiErrorResponse<T> = {
+  status: null;
+  code: number;
+  error: string;
+  data?: T;
+};
+
+export type IApiResponse<T, U = Record<string, any>> = IApiSuccessResponse<T> | IApiErrorResponse<T>;
+
+export type IList<T> = {
+  count: number;
+  results: T[];
+};

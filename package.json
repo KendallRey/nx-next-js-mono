@@ -75,6 +75,7 @@
     "react-number-format": "^5.4.2",
     "react-redux": "^9.1.2",
     "redux-persist": "^6.0.0",
+    "sweetalert2": "^11.14.1",
     "tslib": "^2.3.0",
     "use-debounce": "^10.0.3",
     "zod": "^3.23.8"

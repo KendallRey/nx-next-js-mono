@@ -7,7 +7,7 @@ import { TransitionProps } from "@mui/material/transitions";
 import { ReactElement, ReactNode, Ref, forwardRef, useCallback, useState } from "react";
 import MuiButton from "../button/Button";
 import { Breakpoint, useMediaQuery, useTheme } from "@mui/material";
-import { confirmUnsavedChanges } from "@/hooks/useUnsavedChangesPrompt";
+import { confirmUnsavedChanges } from "../hooks/useUnsavedChangesPrompt";
 
 const Transition = forwardRef(function Transition(
   props: TransitionProps & {

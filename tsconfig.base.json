@@ -20,6 +20,8 @@
       "@nx-next-js-micro/components": ["components/src/index.ts"],
       "@nx-next-js-micro/components/server": ["components/src/server.ts"],
       "@nx-next-js-micro/login-api-types": ["lib/login-api-types/src/index.ts"],
+      "@nx-next-js-micro/services": ["services/src/index.ts"],
+      "@nx-next-js-micro/services/server": ["services/src/server.ts"],
       "@nx-next-js-micro/ui": ["ui/src/index.ts"],
       "@nx-next-js-micro/ui/server": ["ui/src/server.ts"]
     }

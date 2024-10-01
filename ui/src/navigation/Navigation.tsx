@@ -5,7 +5,13 @@ import React, { useCallback } from 'react';
 import { useMediaQuery, useTheme } from '@mui/material';
 import Link from 'next/link';
 import { useScroll, motion } from 'framer-motion';
-import { MuiButton, MuiFab, MuiPaper, MuiTypography, IRoute } from '@nx-next-js-micro/components';
+import {
+  MuiButton,
+  MuiFab,
+  MuiPaper,
+  MuiTypography,
+  IRoute,
+} from '@nx-next-js-micro/components';
 
 type INavigation = {
   routes: IRoute[];
