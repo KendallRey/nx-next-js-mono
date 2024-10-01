@@ -6,7 +6,6 @@ import { LoginRequestBody } from 'lib/login-api-types/src';
 export interface AuthComponentProps {}
 
 export function AuthComponent(props: AuthComponentProps) {
-
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -24,7 +23,7 @@ export function AuthComponent(props: AuthComponentProps) {
       headers: {
         'Content-Type': 'application/json',
       },
-    })
+    });
     if (response.status === 200) {
       window.location.href = '/';
     } else {
@@ -50,7 +49,13 @@ export function AuthComponent(props: AuthComponentProps) {
         id="password"
         className={styles['input']}
       />
-      <button onClick={handleLogin} id="login-button" className={styles['button']}>Login</button>
+      <button
+        onClick={handleLogin}
+        id="login-button"
+        className={styles['button']}
+      >
+        Login
+      </button>
     </div>
   );
 }

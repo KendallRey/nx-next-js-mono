@@ -122,7 +122,9 @@ const UploadFile: React.FC<IUploadFile> = (props) => {
 
   return (
     <div
-      className={`dropzone flex flex-col border border-4 gap-2 border-dashed ${isDragging ? "border-primary-2" : ""} rounded p-4`}
+      className={`dropzone flex flex-col border border-4 gap-2 border-dashed ${
+        isDragging ? "border-primary-2" : ""
+      } rounded p-4`}
       onDragEnter={(e) => handleOnDrag(e, true)}
       onDragEnd={(e) => handleOnDrag(e, false)}
       onDragOver={(e) => handleOnDrag(e, true)}

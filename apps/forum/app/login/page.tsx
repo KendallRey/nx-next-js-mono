@@ -1,5 +1,5 @@
 import styles from './page.module.scss';
-import { AuthComponent }from 'lib/ui/src'
+import { AuthComponent } from 'lib/ui/src';
 /* eslint-disable-next-line */
 export interface LoginProps {}
 

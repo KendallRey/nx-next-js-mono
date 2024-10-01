@@ -9,16 +9,7 @@
     "prettier": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "prettier --write './components/**/*.{js,ts,tsx,jsx,json,css,scss,md}'",
-        "parallel": false
-      }
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/components"],
-      "options": {
-        "jestConfig": "libs/components/jest.config.js",
-        "passWithNoTests": true
+        "command": "nx format:write --projects components"
       }
     }
   }

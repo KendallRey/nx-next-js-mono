@@ -1,10 +1,9 @@
+import { render } from "@testing-library/react";
+import React from "react";
+import MuiAvatar from "./Avatar";
 
-import { render } from '@testing-library/react';
-import React from 'react';
-import MuiAvatar from './Avatar';
-
-describe('Page', () => {
-  it('should render successfully', () => {
+describe("Page", () => {
+  it("should render successfully", () => {
     const { baseElement } = render(<MuiAvatar />);
     expect(baseElement).toBeTruthy();
   });
