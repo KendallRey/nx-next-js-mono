@@ -1,5 +1,5 @@
 import styles from './page.module.scss';
-import { AuthComponent }from 'lib/ui/src'
+import { MuiMoneyField } from '@nx-next-js-micro/lib/component';
 /* eslint-disable-next-line */
 export interface LoginProps {}
 
