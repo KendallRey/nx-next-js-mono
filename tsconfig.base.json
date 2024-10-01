@@ -17,7 +17,8 @@
     "paths": {
       "@nx-next-js-micro/component": ["lib/src/index.ts"],
       "@nx-next-js-micro/component/server": ["lib/src/server.ts"],
-      "@nx-next-js-micro/lib/component": ["lib/component/src/index.ts"],
+      "@nx-next-js-micro/components": ["components/src/index.ts"],
+      "@nx-next-js-micro/components/server": ["components/src/server.ts"],
       "@nx-next-js-micro/lib/component/server": ["lib/component/src/server.ts"],
       "@nx-next-js-micro/lib/ui": ["lib/ui/src/index.ts"],
       "@nx-next-js-micro/lib/ui/server": ["lib/ui/src/server.ts"],
