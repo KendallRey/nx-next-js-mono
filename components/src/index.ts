@@ -120,4 +120,4 @@ export * from "./avatar/Avatar";
 export { default as MuiAvatar } from "./avatar/Avatar";
 
 
-export { type ILayout } from "./types/index";
+export type * from "./types/index";
