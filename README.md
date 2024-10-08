@@ -2,17 +2,36 @@
 
 ## Commands
 
-- nx run <app-name>:dev (run nextjs app)
-- nx serve <back-end> (sample app `login-api` app)
+- `nx run <app-name>:dev` (run nextjs app)
+- `nx serve <back-end>` (sample app `login-api` app)
+- `nx reset` (resets cache)
 
 ### Creating library directory
 
-- mkdir lib
-- nx g @nx/next:library ui --directory=lib
+- `mkdir lib`
+- `nx g @nx/next:library ui --directory=lib`
 
 ### Creating component directory
 
-- nx g @nx/next:component auth-component --project=lib-ui
+- `nx g @nx/next:component auth-component --project=lib-ui`
+
+## Prettier
+Add `prettier` command to specific project (`project.json`):
+```json
+{
+  "targets": {
+    "prettier": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx format:write --projects ui"
+      }
+    }
+  }
+}
+```
+### How to run (either of these 2)
+- `nx run prettier:<app-name>`
+- `nx prettier <app-name>`
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
