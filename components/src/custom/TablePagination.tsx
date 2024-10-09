@@ -13,8 +13,8 @@ import MuiMenuItem from "../menu-item/MenuItem";
 import MuiList, { MuiListItemButton, MuiListItemText } from "../list/List";
 import { getIndexOf } from "../helper/array";
 import { RCE } from "../types";
-import API from "../constants/api";
 import { toSearchParams } from "../helper/api";
+import API from "../constants/API";
 
 type ITablePagination = {
   count: number;
