@@ -22,6 +22,7 @@ import TablePagination from "../custom/TablePagination";
 import MuiIconButton from "../icon-button/IconButton";
 import { HiXMark } from "react-icons/hi2";
 import MuiSelect from "../select/Select";
+import { IOrdering } from "../types";
 
 const CustomMuiTd = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {

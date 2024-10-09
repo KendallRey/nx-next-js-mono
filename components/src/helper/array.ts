@@ -1,3 +1,5 @@
+import { ID, IWithID } from "../types";
+
 /**
  * Returns array of ID.
  * @param {Array<string>} list List of Data with `id`.

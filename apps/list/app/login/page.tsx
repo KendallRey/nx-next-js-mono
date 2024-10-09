@@ -7,7 +7,7 @@ export default function Login(props: LoginProps) {
   return (
     <div className={styles['container']}>
       <h1>Welcome to Login!</h1>
-      <MuiMoneyField />
+      <MuiMoneyField label={'test'} />
     </div>
   );
 }

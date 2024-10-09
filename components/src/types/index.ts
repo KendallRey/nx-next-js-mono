@@ -45,3 +45,16 @@ export type IList<T> = {
   count: number;
   results: T[];
 };
+
+export type ID = number | string;
+
+export type IApiPostProps<T = Record<string, any>> = {
+  payload: T;
+};
+
+export type IApiPutProps<T = Record<string, any>> = {
+  id: ID;
+  payload: T;
+};
+
+export type IWithID = { id: ID } 
