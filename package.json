@@ -1,6 +1,7 @@
 {
-  "name": "@nx-next-js-micro/source",
+  "name": "@nx-next-js-mono/source",
   "version": "0.0.0",
+  "author": "KendallRey",
   "license": "MIT",
   "scripts": {
     "prettier": "prettier --write \"src/**/*\"",
