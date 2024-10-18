@@ -1,0 +1,9 @@
+{
+  "name": "rfs-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/rfs-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["rfs"],
+  "// targets": "to see all targets run: nx show project rfs-e2e --web",
+  "targets": {}
+}
