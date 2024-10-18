@@ -5,6 +5,8 @@ import Autoplay from 'embla-carousel-autoplay'
 import { ILayout, MuiBox } from '@nx-next-js-micro/components';
 import './embla.scss'
 import Image from 'next/image';
+import { DotButton, useDotButton } from './EmblaDotButton';
+import { NextButton, PrevButton, usePrevNextButtons } from './EmblaArrowButtons';
 
 export type IImageCarousel = {
   id: string;
@@ -13,16 +15,36 @@ export type IImageCarousel = {
   title?: string | null;
 }
 
+type SlideProps = {
+  height?: number | string
+}
+
 type ImageCarouselProps = {
   slides: IImageCarousel[];
+  onPrevButtonClick?: () => void;
+  onNextButtonClick?: () => void;
+  prevBtnDisabled?: boolean;
+  nextBtnDisabled?: boolean;
+  slideProps?: SlideProps
 }
 
 export const ImageCarousel: React.FC<ImageCarouselProps> = (props) => {
-  const { slides } = props;
+  const { slides, slideProps } = props;
 
-  const [emblaRef] = useEmblaCarousel(undefined, [
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(undefined, [
     Autoplay({ playOnInit: true, delay: 3000 })
   ])
+
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi)
+
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick
+  } = usePrevNextButtons(emblaApi)
 
   return (
     <section className="embla">
@@ -33,20 +55,14 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = (props) => {
               <Image src={slide.src || ''} alt={slide.id} 
           objectFit="cover"
           fill
-          className="w-full h-full top-0 left-0 object-cover rounded-2xl"/>
-              <div className="embla__slide__number">{index + 1}</div>
+          className="w-full h-full top-0 left-0 object-cover"/>
+              <div className="embla__slide__number" style={{ height: slideProps?.height }}>{index + 1}</div>
             </div>
           ))}
         </div>
-      </div>
-
-      {/* <div className="embla__controls">
-        <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-
-        <div className="embla__dots">
+        {/* <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
@@ -56,8 +72,8 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = (props) => {
               )}
             />
           ))}
-        </div>
-      </div> */}
+        </div> */}
+      </div>
     </section>
   )
 }
