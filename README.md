@@ -6,6 +6,17 @@
 - `nx serve <back-end>` (sample app `login-api` app)
 - `nx reset` (resets cache)
 
+### Starting new NextJS App
+https://nx.dev/nx-api/next
+1. Install `@nx/next` to your NX workspace.
+```bash
+nx add @nx/next
+```
+2. Create NextJS Application
+```bash
+nx g @nx/next:app apps/your-app-name
+```
+
 ### Creating library directory
 
 - `mkdir lib`
