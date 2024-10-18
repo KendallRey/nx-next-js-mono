@@ -22,6 +22,7 @@ const MuiButton: React.FC<MuiButtonProps> = (props) => {
       {...DEFAULT_PROPS}
       sx={{
         textTransform: "none",
+        fontWeight: 600,
         ...sx,
       }}
     />
