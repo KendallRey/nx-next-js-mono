@@ -8,11 +8,11 @@ const RoomCardSkeleton = () => {
       <MuiSkeleton width={"100%"} height={240} />
       </MuiCardMedia>
       <MuiCardContent>
-        <div className='flex justify-between gap-2'>
-          <MuiSkeleton variant='text' width={150}  animation='wave'/>
-          <MuiSkeleton width={35}  animation='wave'/>
+        <div className='flex justify-between gap-2 my-1'>
+          <MuiSkeleton variant='text' height={20} width={150}  animation='wave'/>
+          <MuiSkeleton width={35} height={20} animation='wave'/>
         </div>
-        <MuiStack gap={0.4} marginY={0.8}>
+        <MuiStack gap={0.4} marginY={1}>
           <MuiSkeleton width={170} height={12}  animation='wave'/>
           <MuiSkeleton width={100} height={12}  animation='wave'/>
         </MuiStack>
