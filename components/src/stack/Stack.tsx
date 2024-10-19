@@ -1,8 +1,8 @@
 import { Stack, StackProps } from "@mui/material";
-import React from "react";
+import { forwardRef } from "react";
 
-const MuiStack: React.FC<StackProps> = (props) => {
-  return <Stack {...props} />;
-};
+const MuiStack =  forwardRef<HTMLDivElement, StackProps>((props, ref) => {
+  return <Stack {...props} ref={ref} />;
+}) ;
 
 export default MuiStack;

@@ -1,7 +1,13 @@
-
-import React from 'react'
-import { MuiCard, MuiCardContent, MuiCardMedia, MuiRating, MuiStack, MuiTypography } from '@nx-next-js-micro/components'
-import { IImageCarousel, ImageCarousel } from '@nx-next-js-micro/ui'
+import React from 'react';
+import {
+  MuiCard,
+  MuiCardContent,
+  MuiCardMedia,
+  MuiRating,
+  MuiStack,
+  MuiTypography,
+} from '@nx-next-js-micro/components';
+import { IImageCarousel, ImageCarousel } from '@nx-next-js-micro/ui';
 
 const IMAGES: IImageCarousel[] = [
   {
@@ -30,32 +36,35 @@ const IMAGES: IImageCarousel[] = [
   },
 ];
 
-const RoomCard = () => {
-
+const ProductCard = () => {
   return (
-    <MuiCard className='rounded-2xl hover:shadow-xl'>
-      <MuiCardMedia className='relative'>
-        <ImageCarousel slides={IMAGES} slideProps={{ height: 240 }}/>
+    <MuiCard className="rounded-2xl hover:shadow-xl">
+      <MuiCardMedia className="relative">
+        <ImageCarousel slides={IMAGES} slideProps={{ height: 240 }} />
       </MuiCardMedia>
-      <MuiCardContent  className='cursor-pointer'>
-        <div className='flex justify-between gap-2'>
-          <MuiTypography textOverflow={"ellipsis"} noWrap fontWeight={600}>Room Name</MuiTypography>
+      <MuiCardContent className="cursor-pointer">
+        <div className="flex justify-between gap-2">
+          <MuiTypography textOverflow={'ellipsis'} noWrap fontWeight={600}>
+            Room Name
+          </MuiTypography>
           <MuiStack direction={'row'}>
-          <MuiRating defaultValue={1} max={1} readOnly/> 
+            <MuiRating defaultValue={1} max={1} readOnly />
             <MuiTypography>4.8</MuiTypography>
           </MuiStack>
         </div>
         <MuiStack>
-          <MuiTypography variant='body2'>2,627 kilometers away</MuiTypography>
-          <MuiTypography variant='body2'>Nov 1-6</MuiTypography>
+          <MuiTypography variant="body2">2,627 kilometers away</MuiTypography>
+          <MuiTypography variant="body2">Nov 1-6</MuiTypography>
         </MuiStack>
-        <MuiStack direction={'row'} gap={0.5} alignItems={"center"}>
-          <MuiTypography variant='body1' fontWeight={600}>₱15,217</MuiTypography>
-          <MuiTypography variant='body1'>night</MuiTypography>
+        <MuiStack direction={'row'} gap={0.5} alignItems={'center'}>
+          <MuiTypography variant="body1" fontWeight={600}>
+            ₱15,217
+          </MuiTypography>
+          <MuiTypography variant="body1">night</MuiTypography>
         </MuiStack>
       </MuiCardContent>
     </MuiCard>
-  )
-}
+  );
+};
 
-export default RoomCard
+export default ProductCard;
