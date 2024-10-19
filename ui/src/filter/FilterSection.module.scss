@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.button {
+  top: 0;
+  bottom: 0;
+  display: grid;
+  align-items: center;
+  z-index: 2;
+
+  &.prev {
+  }
+
+  &.next {
+    right: 0;
+  }
+}

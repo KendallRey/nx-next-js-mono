@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const ResponsiveNavigation = () => {
-  return (
-    <div>ResponsiveNavigation</div>
-  )
-}
+  return <div>ResponsiveNavigation</div>;
+};
 
-export default ResponsiveNavigation
+export default ResponsiveNavigation;

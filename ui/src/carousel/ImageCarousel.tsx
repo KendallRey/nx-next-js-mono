@@ -1,23 +1,27 @@
 'use client';
 
 import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay'
+import Autoplay from 'embla-carousel-autoplay';
 import { ILayout, MuiBox } from '@nx-next-js-micro/components';
-import './embla.scss'
+import './embla.scss';
 import Image from 'next/image';
 import { DotButton, useDotButton } from './EmblaDotButton';
-import { NextButton, PrevButton, usePrevNextButtons } from './EmblaArrowButtons';
+import {
+  NextButton,
+  PrevButton,
+  usePrevNextButtons,
+} from './EmblaArrowButtons';
 
 export type IImageCarousel = {
   id: string;
   src?: string | null;
   children?: React.ReactNode;
   title?: string | null;
-}
+};
 
 type SlideProps = {
-  height?: number | string
-}
+  height?: number | string;
+};
 
 type ImageCarouselProps = {
   slides: IImageCarousel[];
@@ -25,26 +29,25 @@ type ImageCarouselProps = {
   onNextButtonClick?: () => void;
   prevBtnDisabled?: boolean;
   nextBtnDisabled?: boolean;
-  slideProps?: SlideProps
-}
+  slideProps?: SlideProps;
+};
 
 export const ImageCarousel: React.FC<ImageCarouselProps> = (props) => {
   const { slides, slideProps } = props;
 
-
   const [emblaRef, emblaApi] = useEmblaCarousel(undefined, [
-    Autoplay({ playOnInit: true, delay: 3000 })
-  ])
+    Autoplay({ playOnInit: true, delay: 3000 }),
+  ]);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi)
+    useDotButton(emblaApi);
 
   const {
     prevBtnDisabled,
     nextBtnDisabled,
     onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
 
   return (
     <section className="embla">
@@ -52,16 +55,24 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = (props) => {
         <div className="embla__container">
           {slides.map((slide, index) => (
             <div className="embla__slide" key={slide.id}>
-              <Image src={slide.src || ''} alt={slide.id} 
-          objectFit="cover"
-          fill
-          className="w-full h-full top-0 left-0 object-cover"/>
-              <div className="embla__slide__number" style={{ height: slideProps?.height }}>{index + 1}</div>
+              <Image
+                src={slide.src || ''}
+                alt={slide.id}
+                objectFit="cover"
+                fill
+                className="w-full h-full top-0 left-0 object-cover"
+              />
+              <div
+                className="embla__slide__number"
+                style={{ height: slideProps?.height }}
+              >
+                {index + 1}
+              </div>
             </div>
           ))}
         </div>
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         {/* <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
@@ -75,5 +86,5 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = (props) => {
         </div> */}
       </div>
     </section>
-  )
-}
+  );
+};
