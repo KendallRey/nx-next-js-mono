@@ -57,4 +57,13 @@ export type IApiPutProps<T = Record<string, any>> = {
   payload: T;
 };
 
-export type IWithID = { id: ID } 
+export type IWithID = { id: ID };
+
+// #region Next JS
+
+export type INextPage = {
+  params?: Record<string, unknown>;
+  searchParams?: { q?: string } & Record<string, unknown>;
+};
+
+// #endregion

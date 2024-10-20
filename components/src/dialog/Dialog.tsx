@@ -8,6 +8,8 @@ import { ReactElement, ReactNode, Ref, forwardRef, useCallback, useState } from 
 import MuiButton from "../button/Button";
 import { Breakpoint, useMediaQuery, useTheme } from "@mui/material";
 import { confirmUnsavedChanges } from "../hooks/useUnsavedChangesPrompt";
+import MuiIconButton from "../icon-button/IconButton";
+import { HiXMark } from "react-icons/hi2";
 
 const Transition = forwardRef(function Transition(
   props: TransitionProps & {
@@ -32,6 +34,7 @@ type IMuiDialog = {
   fullWidth?: boolean;
   disableConfirm?: boolean;
   promptUnsaved?: boolean;
+  hideActions?: boolean;
 } & DialogProps;
 
 const MuiDialog: React.FC<IMuiDialog> = (props) => {
@@ -48,6 +51,7 @@ const MuiDialog: React.FC<IMuiDialog> = (props) => {
     fullWidth,
     disableConfirm,
     promptUnsaved,
+    hideActions,
     ...otherProps
   } = props;
 
@@ -74,20 +78,36 @@ const MuiDialog: React.FC<IMuiDialog> = (props) => {
       {...otherProps}
     >
       <DialogTitle>{title}</DialogTitle>
+      <MuiIconButton
+        aria-label="close"
+        onClick={handleOnClose}
+        sx={(theme) => ({
+          position: "absolute",
+          right: 8,
+          top: 8,
+          color: theme.palette.grey[500],
+        })}
+      >
+        <HiXMark />
+      </MuiIconButton>
       <DialogContent>
         <div className="p-4">{children}</div>
       </DialogContent>
-      <DialogActions>
-        <MuiButton onClick={handleOnClose}>{closeText ?? "Close"}</MuiButton>
-        <MuiButton
-          variant="contained"
-          onClick={onConfirm}
-          color={variant === "delete" ? "error" : "primary"}
-          disabled={disableConfirm}
-        >
-          {confirmText ?? "Confirm"}
-        </MuiButton>
-      </DialogActions>
+      {hideActions === true ? (
+        <></>
+      ) : (
+        <DialogActions>
+          <MuiButton onClick={handleOnClose}>{closeText ?? "Close"}</MuiButton>
+          <MuiButton
+            variant="contained"
+            onClick={onConfirm}
+            color={variant === "delete" ? "error" : "primary"}
+            disabled={disableConfirm}
+          >
+            {confirmText ?? "Confirm"}
+          </MuiButton>
+        </DialogActions>
+      )}
     </Dialog>
   );
 };

@@ -30,10 +30,11 @@ type ImageCarouselProps = {
   prevBtnDisabled?: boolean;
   nextBtnDisabled?: boolean;
   slideProps?: SlideProps;
+  containerProps?: React.ComponentProps<'div'>
 };
 
 export const ImageCarousel: React.FC<ImageCarouselProps> = (props) => {
-  const { slides, slideProps } = props;
+  const { slides, slideProps, containerProps } = props;
 
   const [emblaRef, emblaApi] = useEmblaCarousel(undefined, [
     Autoplay({ playOnInit: true, delay: 3000 }),
@@ -51,7 +52,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = (props) => {
 
   return (
     <section className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
+      <div className="embla__viewport"  {...containerProps} ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (
             <div className="embla__slide" key={slide.id}>

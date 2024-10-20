@@ -1,3 +1,5 @@
+"use client";
+
 import { Typography, TypographyProps } from "@mui/material";
 
 type IMuiTypography = TypographyProps;

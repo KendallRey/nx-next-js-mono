@@ -122,3 +122,7 @@ export { default as MuiAvatar } from "./avatar/Avatar";
 export * from "./rating/Rating";
 
 export type * from "./types/index";
+
+export * from "./date-picker/DateRangePicker";
+
+export * from "./hooks/useAppMediaQuery";
