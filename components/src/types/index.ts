@@ -67,3 +67,9 @@ export type INextPage = {
 };
 
 // #endregion
+
+export type IQueryParams = {
+  page?: number;
+};
+export type IFilters = Record<string, any> & IQueryParams;
+export type ISearchParams = IFilters & IOrdering;
