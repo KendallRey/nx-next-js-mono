@@ -125,4 +125,6 @@ export type * from "./types/index";
 
 export * from "./date-picker/DateRangePicker";
 
+export * from './custom/PageBreadCrumbs'
+
 export * from "./hooks/useAppMediaQuery";

@@ -29,3 +29,8 @@ body {
   line-height: inherit;
   margin: 0;
 }
+
+.rdrMonth {
+  min-width: 27.667em;
+  width: 100% !important;
+}

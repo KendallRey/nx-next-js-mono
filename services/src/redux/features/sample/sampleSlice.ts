@@ -1,5 +1,5 @@
-import { REDUX } from '@/redux/constant/slice';
 import { createSlice } from '@reduxjs/toolkit';
+import { REDUX } from '../../constant/slice';
 
 const sampleSlice = createSlice({
   name: REDUX.SLICE.SAMPLE,

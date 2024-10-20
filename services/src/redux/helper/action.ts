@@ -2,6 +2,7 @@ import { PayloadAction } from '@reduxjs/toolkit';
 import { REDUX } from '../constant/slice';
 import { IWithID } from '@nx-next-js-micro/components';
 import { clearDataArrayOf } from 'components/src/helper/array';
+import { IFormKeysRelation, IReduxFormState } from '../types/redux';
 
 /**
  * Generates a function to set a specific field in the state.

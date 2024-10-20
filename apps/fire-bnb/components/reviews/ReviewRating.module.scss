@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  gap: 1rem;
+
+  > div:first-child {
+    border-left: none;
+  }
+}

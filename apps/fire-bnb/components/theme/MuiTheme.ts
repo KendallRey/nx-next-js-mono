@@ -15,8 +15,11 @@ export const MuiTheme = createTheme({
   },
   typography: {
     fontFamily: inter.style.fontFamily,
+    allVariants: {
+      color: grey[900],
+    },
     body2: {
-      color: 'gray',
+      color: grey[500],
     },
   },
   breakpoints: {},

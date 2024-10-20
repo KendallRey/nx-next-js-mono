@@ -1,3 +1,5 @@
+'use server';
+
 import { Breadcrumbs } from "@mui/material";
 import MuiLink from "../link/Link";
 import Link from "next/link";
@@ -15,7 +17,7 @@ type IRoute = {
   href: string;
 };
 
-const PageBreadCrumbs: React.FC<IPageBreadCrumbs> = (props) => {
+export const PageBreadCrumbs: React.FC<IPageBreadCrumbs> = (props) => {
   const { route, pathNames = [] } = props;
 
   const headersList = headers();
@@ -56,4 +58,3 @@ const PageBreadCrumbs: React.FC<IPageBreadCrumbs> = (props) => {
   );
 };
 
-export default PageBreadCrumbs;
