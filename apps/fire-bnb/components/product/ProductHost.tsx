@@ -44,7 +44,7 @@ const ProductHost = () => {
           </MuiStack>
           <MuiStack direction='row' alignItems="center" gap={2}>
             <GiGraduateCap  fontSize={24}/>
-            <MuiTypography variant='subtitle1'>Graduated at: Malolos State Univerity</MuiTypography>
+            <MuiTypography variant='subtitle1'>Graduated at: Manila State Univerity</MuiTypography>
           </MuiStack>
           <MuiTypography variant='subtitle1'>{PLACEHOLDER.USER_DESCRIPTION_1}</MuiTypography>
         </MuiStack>

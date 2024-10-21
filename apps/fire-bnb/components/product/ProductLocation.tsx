@@ -15,7 +15,7 @@ const ProductLocation = () => {
           />
         </MuiPaper>
         <MuiStack gap={1}>
-          <MuiTypography fontSize={20}>Malolos, Bulacan</MuiTypography>
+          <MuiTypography fontSize={20}>Quezon City, Manila</MuiTypography>
           <MuiTypography fontWeight={400}>
             {PLACEHOLDER.PRODUCT_LOCATION_DESCRIPTION_1}
           </MuiTypography>

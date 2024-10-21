@@ -33,7 +33,7 @@ const ReservationDates = () => {
 
   const daysBetween = useMemo(() => {
     if (!daysCount) return 'Select check-in date';
-    return `${daysCount} night${daysCount > 1 ? 's' : ''} in Malolos`;
+    return `${daysCount} night${daysCount > 1 ? 's' : ''} in Quezon`;
   }, [daysCount]);
 
   const checkInDates = useMemo(() => {

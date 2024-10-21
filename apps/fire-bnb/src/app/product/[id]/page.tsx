@@ -44,7 +44,7 @@ const ViewRoomPage: React.FC<INextPage> = (props) => {
           <MuiBox className="flex flex-col flex-grow gap-8">
             <div>
               <MuiTypography fontSize={24}>
-                Entire cabin in Malolos City, Bulacan
+                Entire cabin in Quezon City, Manila
               </MuiTypography>
               <MuiStack direction={'row'} gap={1}>
                 <MuiTypography>4 guests</MuiTypography>

@@ -42,7 +42,7 @@ const ReservationCard: React.FC<IReservationCard> = (props) => {
 
   const daysBetween = useMemo(() => {
     if (!daysCount) return 'Select check-in date';
-    return `${daysCount} night in Malolos`;
+    return `${daysCount} night in Quezon`;
   }, [daysCount]);
 
   const checkInDates = useMemo(() => {
