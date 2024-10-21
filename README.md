@@ -128,3 +128,12 @@ It will show tasks that you can run with Nx.
 - [Join the community](https://nx.dev/community)
 - [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
+
+```bash
+Build Command
+npx nx build fire-bnb --prod
+npx nx reset
+
+Run Command
+npx nx start fire-bnb
+```
