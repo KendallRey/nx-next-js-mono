@@ -1,0 +1,22 @@
+[NX Daemon Server] - 2024-10-21T13:14:45.488Z - Started listening on: \\.\pipe\nx\C:\Users\PCB\AppData\Local\Temp\6168051087416ac00b08\d.sock
+[NX Daemon Server] - 2024-10-21T13:14:45.493Z - [WATCHER]: Subscribed to changes within: D:\NxProject\nx-next-js-micro (native)
+[NX Daemon Server] - 2024-10-21T13:14:45.496Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-21T13:14:45.499Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-21T13:14:45.499Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-21T13:14:45.502Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2024-10-21T13:14:45.503Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2024-10-21T13:14:45.506Z - Handled FORCE_SHUTDOWN. Handling time: 0. Response time: 4.
+[NX Daemon Server] - 2024-10-21T13:14:45.506Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-21T13:14:45.506Z - [WATCHER]: Stopping the watcher for D:\NxProject\nx-next-js-micro (sources)
+[NX Daemon Server] - 2024-10-21T13:14:45.507Z - [WATCHER]: Stopping the watcher for D:\NxProject\nx-next-js-micro (outputs)
+[NX Daemon Server] - 2024-10-21T13:20:26.533Z - Started listening on: \\.\pipe\nx\C:\Users\PCB\AppData\Local\Temp\6168051087416ac00b08\d.sock
+[NX Daemon Server] - 2024-10-21T13:20:26.536Z - [WATCHER]: Subscribed to changes within: D:\NxProject\nx-next-js-micro (native)
+[NX Daemon Server] - 2024-10-21T13:20:26.539Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-21T13:20:26.541Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-21T13:20:26.541Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-10-21T13:20:26.543Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2024-10-21T13:20:26.543Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2024-10-21T13:20:26.543Z - Handled FORCE_SHUTDOWN. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2024-10-21T13:20:26.545Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-10-21T13:20:26.545Z - [WATCHER]: Stopping the watcher for D:\NxProject\nx-next-js-micro (sources)
+[NX Daemon Server] - 2024-10-21T13:20:26.545Z - [WATCHER]: Stopping the watcher for D:\NxProject\nx-next-js-micro (outputs)
