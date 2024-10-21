@@ -11,7 +11,7 @@ const ProductHost = () => {
       <MuiTypography fontSize={20}>Meet your Host</MuiTypography>
       <MuiBox className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         <MuiStack gap={4}>
-        <MuiPaper sx={{ borderRadius: 4, paddingY: 3}} className='flex gap-4 items-center shadow-xl'>
+        <MuiPaper sx={{ borderRadius: 4, paddingY: 3}} className='flex gap-4 justify-between items-center shadow-xl'>
           <MuiStack alignItems="center" marginX={6}>
             <MuiAvatar sx={{ width: 120, height: 120 }}/>
             <MuiTypography  fontSize={24} fontWeight={600}>Smith</MuiTypography>
