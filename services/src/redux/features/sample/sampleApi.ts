@@ -1,21 +1,20 @@
-import { REDUX } from '@/redux/constant/slice';
-import {
-  getBaseFetchQuery,
-  toQueryString,
-  transformErrorResponse,
-} from '@/redux/helper/query';
-import { createApi } from '@reduxjs/toolkit/query/react';
+
+import { createApi } from "@reduxjs/toolkit/dist/query/react";
+import { REDUX } from "../../constant/slice";
+import { IApiParams } from "@nx-next-js-micro/components";
+import { GetBaseFetchQuery, toQueryString, TransformErrorResponse } from "../../helper/query";
+
 
 const TAGS = [REDUX.API.TAGS.SAMPLE_LIST, REDUX.API.TAGS.SAMPLE_ID];
 
 type ISamplePayload = {
-  id: ID;
-  data: Record<string, IValue>;
+  id: string;
+  data: Record<string, any>;
 };
 
 export const sampleApi = createApi({
   reducerPath: REDUX.API.SAMPLE,
-  baseQuery: getBaseFetchQuery,
+  baseQuery: GetBaseFetchQuery,
   tagTypes: TAGS,
   endpoints: (builder) => ({
     getSampleList: builder.query<unknown, IApiParams>({
@@ -23,12 +22,12 @@ export const sampleApi = createApi({
         const qs = toQueryString(params);
         return `/api/sample/list?${qs}`;
       },
-      transformErrorResponse: transformErrorResponse,
+      transformErrorResponse: TransformErrorResponse,
       providesTags: [REDUX.API.TAGS.SAMPLE_LIST],
     }),
     getSampleById: builder.query<unknown, string>({
       query: (id) => `/api/sample/${id}`,
-      transformErrorResponse: transformErrorResponse,
+      transformErrorResponse: TransformErrorResponse,
       providesTags: [REDUX.API.TAGS.SAMPLE_ID],
     }),
     createSample: builder.mutation<unknown, ISamplePayload>({
@@ -37,7 +36,7 @@ export const sampleApi = createApi({
         method: 'POST',
         body: data,
       }),
-      transformErrorResponse: transformErrorResponse,
+      transformErrorResponse: TransformErrorResponse,
       invalidatesTags: [REDUX.API.TAGS.SAMPLE_ID, REDUX.API.TAGS.SAMPLE_LIST],
     }),
     updateSample: builder.mutation<unknown, ISamplePayload>({
@@ -46,7 +45,7 @@ export const sampleApi = createApi({
         method: 'PUT',
         body: data,
       }),
-      transformErrorResponse: transformErrorResponse,
+      transformErrorResponse: TransformErrorResponse,
       invalidatesTags: [REDUX.API.TAGS.SAMPLE_ID, REDUX.API.TAGS.SAMPLE_LIST],
     }),
     patchSample: builder.mutation<unknown, ISamplePayload>({
@@ -55,15 +54,15 @@ export const sampleApi = createApi({
         method: 'PATCH',
         body: data,
       }),
-      transformErrorResponse: transformErrorResponse,
+      transformErrorResponse: TransformErrorResponse,
       invalidatesTags: [REDUX.API.TAGS.SAMPLE_ID, REDUX.API.TAGS.SAMPLE_LIST],
     }),
-    deleteSample: builder.mutation<unknown, ID>({
+    deleteSample: builder.mutation<unknown, string>({
       query: (id) => ({
         url: `/api/sample/${id}`,
         method: 'DELETE',
       }),
-      transformErrorResponse: transformErrorResponse,
+      transformErrorResponse: TransformErrorResponse,
       invalidatesTags: [REDUX.API.TAGS.SAMPLE_ID, REDUX.API.TAGS.SAMPLE_LIST],
     }),
   }),

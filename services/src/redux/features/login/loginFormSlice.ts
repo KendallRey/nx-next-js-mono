@@ -7,6 +7,7 @@ import {
 } from '../../helper/action';
 import { createSlice } from '@reduxjs/toolkit';
 import { REDUX } from '../../constant/slice';
+import { IReduxFormState } from '../../types/redux';
 
 type ILoginFormSliceState = IReduxFormState<{}>;
 
